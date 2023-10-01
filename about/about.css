@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
@@ -8,6 +9,19 @@ body {
   margin: 0px;
 }
 
+h2{
+  font-size: 2.5em;
+}
+
+p{
+  font-size: 1.3em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+nav, 
 .navRight a,
 .navRight ul,
 .navRight li {
@@ -16,11 +30,7 @@ body {
   color: black;
   transition: 0.5s;
   font-weight: 300;
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
+  position: relative;
 }
 
 nav {
@@ -39,18 +49,45 @@ nav {
 .navRight {
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 1.5em;
 }
 
 .navRight a:hover {
   color: grey;
 }
 
+nav ul li a.active:before {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  width: 15px;
+  border-bottom: 1px solid black;
+}
+
+nav ul li a:before {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  width: 0%;
+  border-bottom: 1px solid black;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover:before {
+  width: 20px;
+}
+
+
 .navRight ul {
   display: flex;
   gap: 60px;
   flex-direction: row;
   padding-left: 0px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .content {
@@ -69,7 +106,7 @@ nav {
 }
 
 .content h2 {
-  font-size: 6em;
+  font-size: 9em;
   margin-block: 0em;
   padding-bottom: 0.2em;
 }
@@ -114,7 +151,6 @@ nav {
   color: #545454;
   text-align: center;
   width: 68%;
-  font-size: 0.8em;
   margin-block: 0em;
   font-weight: 300;
 }
@@ -128,7 +164,6 @@ nav {
 
 .judul h2 {
   margin-block-start: 0em;
-  font-size: 2em;
 }
 
 .picture {
@@ -170,7 +205,6 @@ nav {
 .closing p {
   color: #545454;
   font-weight: 300;
-  font-size: 0.8em;
   text-align: center;
 }
 
@@ -190,11 +224,11 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   color: white;
-  padding-top: 3em;
+  padding-top: 8em;
 }
 
 .footerContent h2 {
-  font-size: 0.8em;
+  font-size: 1.5em;
   margin-block: 0em;
 }
 
@@ -209,7 +243,7 @@ footer {
 .help a {
   text-decoration: none;
   color: white;
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-weight: 300;
 }
 
@@ -222,7 +256,11 @@ footer {
 .sosmed {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 3em;
+}
+
+.sosmed i{
+  font-size: 1.5em;
 }
 
 .sosmed a {
@@ -235,11 +273,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .navRight {
-    display: none;
-  }
   nav {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .nav:first-child {
     margin-right: unset;
@@ -259,6 +296,9 @@ footer {
   .box {
     width: 55%;
   }
+  .sosmed{
+    gap: 1em;
+  }
 }
 
 @media screen and (max-width: 453px) {
@@ -268,6 +308,9 @@ footer {
   .content p {
     font-size: 0.6em;
     width: 80%;
+  }
+  .navRight ul{
+    gap: 27px;
   }
   .box {
     width: 70%;

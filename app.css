@@ -1,9 +1,23 @@
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   padding: 0px;
   margin: 0px;
 }
 
+h2{
+  font-size: 2.5em;
+}
+
+p{
+  font-size: 1.3em;
+}
+
+nav, 
 .navRight a,
 .navRight ul,
 .navRight li {
@@ -12,6 +26,7 @@ body {
   color: black;
   transition: 0.5s;
   font-weight: 300;
+  position: relative;
 }
 
 nav {
@@ -30,12 +45,34 @@ nav {
 .navRight {
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 1.5em;
 }
 
 .navRight a:hover {
   color: grey;
 }
+
+nav ul li a.active:before {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  width: 15px;
+  border-bottom: 1px solid black;
+}
+
+nav ul li a:before {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  width: 0%;
+  border-bottom: 1px solid black;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover:before {
+  width: 20px;
+}
+
 
 .navRight ul {
   display: flex;
@@ -69,15 +106,14 @@ nav {
 }
 
 .lastContent h2 {
-  font-size: 2em;
   font-weight: 700;
 }
 
 .firstContent p {
   margin-block: 0px;
-  font-size: 0.8em;
   margin-bottom: 1.2em;
   margin-top: 1em;
+  font-weight: 700;
 }
 
 .content {
@@ -111,8 +147,9 @@ nav {
 .fourthContent h2 {
   font-family: "Playfair Display", serif;
   margin-block: 0px;
-  font-size: 2em;
+  font-size: 5em;
   margin-top: auto;
+  text-align: center;
   z-index: 1;
 }
 
@@ -122,6 +159,7 @@ nav {
 .fourthContent p {
   margin-bottom: 5em;
   z-index: 1;
+  font-size: 2em;
 }
 
 .secondContent::before {
@@ -190,9 +228,10 @@ nav {
 
 .lastContent p {
   margin-block: 0px;
-  font-size: 0.8em;
+  font-size: 1em;
   margin-bottom: 1.2em;
   margin-top: 3em;
+  font-weight: 700;
 }
 
 .button {
@@ -229,11 +268,11 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   color: white;
-  padding-top: 3em;
+  padding-top: 8em;
 }
 
 .footerContent h2 {
-  font-size: 0.8em;
+  font-size: 1.5em;
   margin-block: 0em;
 }
 
@@ -248,7 +287,7 @@ footer {
 .help a {
   text-decoration: none;
   color: white;
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-weight: 300;
 }
 
@@ -261,7 +300,7 @@ footer {
 .sosmed {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 3em;
 }
 
 .sosmed a {
@@ -269,21 +308,27 @@ footer {
   color: white;
 }
 
+.sosmed i{
+  font-size: 1.5em;
+}
+
 .sosmed a:hover {
   color: rgba(0, 0, 0, 0.708);
 }
 
 @media screen and (max-width: 768px) {
-  .navRight {
-    display: none;
-  }
   nav {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .nav:first-child {
     margin-right: unset;
   }
   .firstContent p {
+    text-align: center;
+  }
+  .firstContent h2{
     text-align: center;
   }
   .leftContent h2 {
@@ -303,11 +348,17 @@ footer {
   .thirdContent {
     flex-direction: column;
   }
+  .sosmed{
+    gap: 1em;
+  }
 }
 
 @media screen and (max-width: 453px) {
   .lastContent h2 {
     font-size: 1em;
+  }
+  .navRight ul{
+    gap: 27px;
   }
   .lastContent p {
     font-size: 0.5em;
