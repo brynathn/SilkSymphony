@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   padding: 0px;
@@ -14,9 +18,9 @@ body {
   font-weight: 300;
 }
 
-.container{
-    max-width: 1280px;
-    margin: 0 auto;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 nav {
@@ -78,6 +82,16 @@ nav {
   bottom: 0.1em;
 }
 
+.readMore a {
+  text-decoration: none;
+  color: white;
+  transition: 1s;
+}
+
+.readMore a:hover {
+  color: grey;
+}
+
 .readMore h3 {
   margin-block: 0.5em;
 }
@@ -105,19 +119,19 @@ nav {
   font-weight: 300;
 }
 
-.ourProfile{
+.ourProfile {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.judul h2{
+.judul h2 {
   margin-block-start: 0em;
   font-size: 2em;
 }
 
-.picture{
+.picture {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -125,7 +139,7 @@ nav {
   gap: 1em;
 }
 
-.box{
+.box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,15 +151,15 @@ nav {
   margin-bottom: 2em;
 }
 
-.nama{
+.nama {
   font-weight: 700;
 }
 
-.box p{
+.box p {
   margin-block: 0.5em;
 }
 
-.box img{
+.box img {
   border-radius: 100%;
   width: 100px;
   height: 100px;
@@ -153,15 +167,16 @@ nav {
   padding-top: 1em;
 }
 
-.closing p{
+.closing p {
   color: #545454;
   font-weight: 300;
   font-size: 0.8em;
   text-align: center;
 }
 
-.closing{
+.closing {
   width: 68%;
+  margin-bottom: 2em;
 }
 
 footer {
@@ -229,32 +244,32 @@ footer {
   .nav:first-child {
     margin-right: unset;
   }
-  .content h2{
+  .content h2 {
     font-size: 4em;
   }
-  .content p{
+  .content p {
     font-size: 0.8em;
     width: 70%;
   }
-  .picture{
+  .picture {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .box{
+  .box {
     width: 55%;
   }
 }
 
 @media screen and (max-width: 453px) {
-  .content h2{
+  .content h2 {
     font-size: 3em;
   }
   .content p {
     font-size: 0.6em;
     width: 80%;
   }
-  .box{
+  .box {
     width: 70%;
   }
 }
