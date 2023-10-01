@@ -586,10 +586,16 @@ footer {
   .sosmed{
     gap: 1em;
   }
+  .top-container, .top-product-container{
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 453px) {
   .navRight ul{
     gap: 27px;
+  }
+  .top-container, .top-product-container{
+    height: 315px;
   }
 }
