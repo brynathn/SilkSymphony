@@ -159,6 +159,10 @@ button:hover {
   color: white;
 }
 
+.clsButton{
+  text-align: right;
+}
+
 footer {
   background-color: #8c8c8c;
   width: 100%;
@@ -242,6 +246,24 @@ footer {
   .top-container,
   .top-product-container {
     height: 250px;
+  }
+  .contacts{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .textAwal{
+    width: 100%;
+  }
+  .contents {
+    margin-left: 0em;
+  }
+  .contactform {
+    margin-right: 0em;
+  }
+  .clsButton{
+    text-align: center;
   }
 }
 
