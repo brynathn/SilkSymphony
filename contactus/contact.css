@@ -1,0 +1,256 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+nav,
+.navRight a,
+.navRight ul,
+.navRight li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  transition: 0.5s;
+  font-weight: 300;
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+}
+
+.nav:first-child {
+  margin-right: auto;
+}
+
+.nav h2 {
+  cursor: pointer;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.navRight a:hover {
+  color: grey;
+}
+
+nav ul li a.active:before {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  width: 15px;
+  border-bottom: 1px solid black;
+}
+
+nav ul li a:before {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  width: 0%;
+  border-bottom: 1px solid black;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover:before {
+  width: 20px;
+}
+
+.navRight ul {
+  display: flex;
+  gap: 60px;
+  flex-direction: row;
+  padding-left: 0px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+.contents h1 {
+  font-size: 3.8em;
+  font-weight: 700;
+  margin-block: 0.5em;
+}
+
+.contents {
+  width: 50%;
+}
+
+.contactform {
+  width: 50%;
+}
+
+.textAwal {
+  width: 80%;
+}
+
+.contactform h1 {
+  font-size: 3.8em;
+  margin-block: 0.5em;
+}
+.inputbox textarea {
+  height: 10em;
+  width: 100%;
+  border-radius: 0.5em;
+  border: 1px solid #5454549e;
+}
+.inputbox input {
+  width: 100%;
+  height: 3em;
+  border-radius: 0.5em;
+  border: 1px solid #5454549e;
+}
+
+.contactform table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+.contactform td,
+.contactform th {
+  padding-bottom: 1em;
+  padding-right: 1em;
+  border-radius: 2em;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(235, 223, 223, 0.3);
+  color: black;
+  border-radius: 2em;
+  text-decoration: none;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 300;
+}
+
+button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+footer {
+  background-color: #8c8c8c;
+  width: 100%;
+  height: 330px;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  padding-top: 8em;
+}
+
+.footerContent h2 {
+  font-size: 1.5em;
+  margin-block: 0em;
+}
+
+.setFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.company a,
+.product a,
+.help a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.company a:hover,
+.product a:hover,
+.help a:hover {
+  color: rgba(0, 0, 0, 0.708);
+}
+
+.sosmed {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+
+.sosmed a {
+  text-decoration: none;
+  color: white;
+}
+
+.sosmed i {
+  font-size: 1.5em;
+}
+
+.sosmed a:hover {
+  color: rgba(0, 0, 0, 0.708);
+}
+
+@media screen and (max-width: 1280px) {
+  .contents {
+    margin-left: 1em;
+  }
+  .contactform {
+    margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav:first-child {
+    margin-right: unset;
+  }
+  .sosmed {
+    gap: 1em;
+  }
+  .top-container,
+  .top-product-container {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 453px) {
+  .navRight ul {
+    gap: 27px;
+  }
+  .top-container,
+  .top-product-container {
+    height: 315px;
+  }
+}

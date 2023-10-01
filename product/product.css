@@ -574,6 +574,15 @@ footer {
   color: rgba(0, 0, 0, 0.708);
 }
 
+@media screen and (max-width: 1280px) {
+  .product-grid{
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  }
+  .top-container, .top-product-container{
+    height: 470px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   nav {
     justify-content: center;
@@ -587,7 +596,7 @@ footer {
     gap: 1em;
   }
   .top-container, .top-product-container{
-    height: 250px;
+    height: 570px;
   }
 }
 
@@ -596,6 +605,6 @@ footer {
     gap: 27px;
   }
   .top-container, .top-product-container{
-    height: 315px;
+    height: 400px;
   }
 }
