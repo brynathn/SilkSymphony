@@ -116,17 +116,28 @@ nav ul li a:hover:before {
   font-size: 3.8em;
   margin-block: 0.5em;
 }
+
+.inputbox input {
+  width: 100%;
+  height: 3em;
+  border-radius: 0.5em;
+  border: 1px solid #5454549e;
+}
+
+.inputbox input::placeholder {
+  padding-left: 1em;
+}
+
 .inputbox textarea {
   height: 10em;
   width: 100%;
   border-radius: 0.5em;
   border: 1px solid #5454549e;
 }
-.inputbox input {
-  width: 100%;
-  height: 3em;
-  border-radius: 0.5em;
-  border: 1px solid #5454549e;
+
+.inputbox textarea::placeholder {
+  padding-left: 1em;
+  padding-top: 1em;
 }
 
 .contactform table {
@@ -143,15 +154,16 @@ nav ul li a:hover:before {
 
 button {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: rgba(235, 223, 223, 0.3);
+  padding: 8px 20px;
+  background-color: white;
   color: black;
   border-radius: 2em;
   text-decoration: none;
-  border: 2px solid black;
+  border: 1px solid black;
   cursor: pointer;
   transition: 0.5s;
-  font-weight: 300;
+  font-weight: 800;
+  margin-left: 1em;
 }
 
 button:hover {
@@ -159,7 +171,7 @@ button:hover {
   color: white;
 }
 
-.clsButton{
+.clsButton {
   text-align: right;
 }
 
@@ -247,13 +259,13 @@ footer {
   .top-product-container {
     height: 250px;
   }
-  .contacts{
+  .contacts {
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
   }
-  .textAwal{
+  .textAwal {
     width: 100%;
   }
   .contents {
@@ -262,7 +274,7 @@ footer {
   .contactform {
     margin-right: 0em;
   }
-  .clsButton{
+  .clsButton {
     text-align: center;
   }
 }
