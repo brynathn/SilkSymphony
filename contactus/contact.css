@@ -53,7 +53,7 @@ nav {
   color: grey;
 }
 
-nav ul li a.active:before {
+a.active:before {
   position: absolute;
   bottom: -1px;
   content: "";
@@ -61,7 +61,7 @@ nav ul li a.active:before {
   border-bottom: 1px solid black;
 }
 
-nav ul li a:before {
+a:before {
   position: absolute;
   bottom: -1px;
   content: "";
@@ -70,7 +70,7 @@ nav ul li a:before {
   transition: width 0.5s;
 }
 
-nav ul li a:hover:before {
+a:hover:before {
   width: 20px;
 }
 
@@ -286,5 +286,8 @@ footer {
   .top-container,
   .top-product-container {
     height: 315px;
+  }
+  .clsButton button{
+    margin-top: 1em;
   }
 }
